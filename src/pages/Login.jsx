@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   return (
-    <div className=" flex flex-col gap-6 py-8 justify-center items-center mt-10 max-w-md bg-white shadow-lg rounded-xl  mx-auto">
+    <div className=" flex flex-col gap-6 py-8 justify-center items-center my-25 max-w-md bg-white shadow-lg rounded-xl  mx-auto">
       <h1 className="text-4xl font-semibold text-neutral-800">Login</h1>
       <form className="flex flex-col gap-4 w-full px-6 ">
         <input
