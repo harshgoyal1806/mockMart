@@ -16,28 +16,30 @@ const Cart = () => {
   // Calculate total price
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
 
   if (cartItems.length === 0) {
     return (
-      <div className="w-full min-h-screen flex flex-col justify-center items-center gap-6 p-4">
-        <IoCartOutline className="text-6xl text-gray-400" />
-        <p className="text-2xl font-semibold text-gray-700 text-center">
-          Your Cart is Empty
-        </p>
-        <button
-          className="px-6 py-3 rounded-md border border-gray-700 font-semibold hover:bg-gray-700 hover:text-white transition"
-          onClick={() => navigate("/")}
-        >
-          Start Shopping
-        </button>
+      <div>
+        <div className="w-full mt-25 flex flex-col justify-center items-center gap-6 p-4">
+          <IoCartOutline className="text-6xl text-gray-400" />
+          <p className="text-2xl font-semibold text-gray-700 text-center">
+            Your Cart is Empty
+          </p>
+          <button
+            className="px-6 py-3 rounded-md border border-gray-700 font-semibold hover:bg-gray-700 hover:text-white transition"
+            onClick={() => navigate("/")}
+          >
+            Start Shopping
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="w-full min-h-screen flex flex-col p-4 md:p-8 gap-6">
+    <div className="w-full mt-25 mb-20 flex flex-col p-4 md:p-8 gap-6">
       {cartItems.map((item) => (
         <div
           key={item.id}
@@ -69,7 +71,6 @@ const Cart = () => {
               +
             </button>
           </div>
-
 
           <button
             className="text-sm text-red-500 hover:text-red-700 font-semibold mt-2 md:mt-0"

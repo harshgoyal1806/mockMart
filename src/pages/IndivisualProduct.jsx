@@ -26,7 +26,7 @@ const IndivisualProduct = () => {
   if (!singleProduct) return <p>Product not found</p>;
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8 ">
+    <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8  mt-20">
   <div className="mb-6">
     <Link
       to="/"
